@@ -1,14 +1,16 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-
+.result-page {
   width: 390px;
   min-height: 844px;
   margin: 0 auto;
+  padding-top: 85px;
 
-  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.result-page h1 {
+  font-size: 64px;
   font-weight: 700;
 }
