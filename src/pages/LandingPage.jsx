@@ -11,7 +11,7 @@ function LandingPage() {
   return (
     <div 
       className="page"
-      onClick={() => navigate("/select")}
+      onClick={() => navigate("/name")}
     >
 
       {/* 배경 Glow */}

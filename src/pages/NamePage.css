@@ -1,0 +1,172 @@
+.page {
+  position: relative;
+
+  width: 390px;
+  min-height: 844px;
+  margin: 0 auto;
+
+  background: white;
+
+  overflow: hidden;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.background-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 50%;
+  top: 42%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(107, 147, 255, 0.25) 0%,
+    rgba(107, 147, 255, 0.18) 35%,
+    rgba(107, 147, 255, 0.10) 60%,
+    rgba(107, 147, 255, 0) 100%
+  );
+
+  filter: blur(60px);
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.select-center {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  min-height: 844px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 162px;
+}
+
+.main-fish {
+  width: 140px;
+  height: 140px;
+
+  object-fit: contain;
+}
+
+.welcome-title {
+
+  margin-top: -1px;
+
+  font-family: "Pretendard";
+
+  font-weight: 700;
+
+  font-size: 35px;
+
+  line-height: 32px;
+
+  color: #111111;
+
+}
+
+.welcome-description {
+  width: 390px;
+
+  margin-top: 40px;
+
+  font-family: "Pretendard";
+  font-weight: 500;
+
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.01em;
+
+  text-align: center;
+  color: #1F1F1F;
+}
+
+.welcome-description span {
+  color: #3D82F6;
+}
+
+.name-input-box {
+  position: relative;
+
+  width: 300px;
+  height: 44px;
+
+  margin-top: 13px;
+}
+
+.name-input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 52px 0 16px;
+
+  border: 1px solid #CFCFCF;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-weight: 500;
+
+  background: white;
+}
+
+.name-input::placeholder {
+  color: #9B9B9B;
+}
+
+.name-count {
+  position: absolute;
+
+  right: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-family: "Pretendard";
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #8A8A8A;
+}
+
+.next-button {
+  position: absolute;
+
+  bottom: 74px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 246px;
+  height: 52px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #3D82F6;
+
+  color: white;
+
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
