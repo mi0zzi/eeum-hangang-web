@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NamePage.css";
 
-import mainFish from "../assets/logo/mainfish1.png";
+import mainFish from "../assets/images/mainfish.png";
 
 function NamePage() {
   const navigate = useNavigate();
-  const [fishName, setFishName] = useState("");
+  const [nickname, setNickname] = useState("");
   
   return (
     <div className="page">
@@ -38,11 +38,11 @@ function NamePage() {
             placeholder="예시) 피라미"
             maxLength={10}
             className="name-input"
-            value={fishName}
-            onChange={(e) => setFishName(e.target.value)}
+            value={nickname}
+            onChange={(e) => setNickname(e.target.value)}
           />
 
-          <span className="name-count">{fishName.length} / 10</span>
+          <span className="name-count">{nickname.length} / 10</span>
         </div>
 
     </div>
@@ -50,7 +50,7 @@ function NamePage() {
     <button
         className="next-button"
         onClick={() => {
-            if (fishName.trim() !== "") {
+            if (nickname.trim() !== "") {
                 navigate("/select");
             }
         }}

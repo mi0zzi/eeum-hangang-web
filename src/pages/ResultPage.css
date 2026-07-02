@@ -1,16 +1,116 @@
 .result-page {
+  position: relative;
+
   width: 390px;
   min-height: 844px;
   margin: 0 auto;
-  padding-top: 85px;
+
+  overflow: hidden;
+
+  background-image: url("../assets/images/hangangriver.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hangangriver {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.result-top {
+  position: relative;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+
+  padding-top: 68px;
 }
 
-.result-page h1 {
-  font-size: 64px;
+.result-title {
+  margin-top: 48px;
+
+  color: #000000;
+
+  font-family: "Pretendard";
+  font-size: 32px;
   font-weight: 700;
+}
+
+.result-description {
+  margin-top: 8px;
+
+  color: #000000;
+
+  font-family: "Pretendard";
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.result-card {
+  position: absolute;
+  top: 390px;
+  left: 110px;
+  z-index: 2;
+
+  width: 165px;
+  height: 57px;
+  border: 1.5px solid #7eb1f8;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.05);
+}
+
+.result-fish {
+  position: absolute;
+  top: -35px;
+  left: 58px;
+
+  width: 53px;
+  height: auto;
+}
+
+.result-card p {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Pretendard";
+  font-size: 9.3px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.result-card strong {
+  color: #2d81f5;
+  font-weight: 700;
+}
+
+.result-button {
+  position: absolute;
+  bottom: 68px;
+  left: 95px;
+  z-index: 2;
+
+  width: 200px;
+  height: 44px;
+  border: none;
+  border-radius: 20px;
+
+  background: #2d81f5;
+  color: #fafafa;
+
+  font-family: "Pretendard";
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
 }
