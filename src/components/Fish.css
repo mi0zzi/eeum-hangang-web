@@ -1,0 +1,35 @@
+.fish {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fish-image {
+  width: 48px;
+  height: auto;
+}
+
+.fish-nickname {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 20px;
+  height: 10px;
+  padding: 0 5px;
+  margin-top: -2px;
+
+  border-radius: 3px;
+  background: #dbeafb;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.03);
+
+  color: #2c2f32;
+
+  font-family: "Pretendard";
+  font-size: 5px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 
-import logo from "../assets/logo/EEUMlogo1.png";
-import logoText from "../assets/logo/EEUM-LogoText1.png";
+import logo from "../assets/images/EEUM-LogoImage.png";
+import logoText from "../assets/images/EEUM-LogoText.png";
 
 function LandingPage() {
 
@@ -26,13 +26,13 @@ function LandingPage() {
         {/* 이음로고1 */}
         <img
           src={logo}
-          alt="EEUMlogo1"
+          alt="EEUM-LogoImage"
           className="landing-logo"
         />
 
         <img
           src={logoText}
-          alt="EEUM-LogoText1"
+          alt="EEUM-LogoText"
           className="landing-logo-text"
         />
 
