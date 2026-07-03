@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NamePage.css";
 
+import ProgressBar from "../components/ProgressBar";
 import mainFish from "../assets/images/mainfish.png";
 
 function NamePage() {
@@ -14,6 +15,8 @@ function NamePage() {
       {/* 배경 Glow */}
       <div className="background-glow"></div>
       
+      <ProgressBar currentStep={1} />
+
       <div className="select-center">
 
         <img
@@ -48,7 +51,7 @@ function NamePage() {
         <button
           className="next-button"
           onClick={() => {
-            if (nickName.trim() !== "") {
+            if (nickname.trim() !== "") {
                 navigate("/select");
             }
           }}
@@ -58,16 +61,6 @@ function NamePage() {
 
     </div>
 
-    <button
-        className="next-button"
-        onClick={() => {
-            if (nickname.trim() !== "") {
-                navigate("/select");
-            }
-        }}
-    >
-        다음
-    </button>
       
       {/*
       기존 테스트 코드 (임시 보관)
