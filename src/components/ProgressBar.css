@@ -1,0 +1,42 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  color: #747474;
+
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.progress-circle.active {
+  background: #2d81f5;
+  color: #ffffff;
+}
+
+.progress-circle img {
+  width: 22px;
+  height: 22px;
+}
+
+.progress-line {
+  width: 25px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.progress-line.active {
+  background: #2d81f5;
+}

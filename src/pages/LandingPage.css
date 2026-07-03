@@ -71,23 +71,5 @@
 
   height: auto;
 
-  margin-top: 15px;
-}
-
-.dynamic-island {
-  position: absolute;
-
-  top: 20px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 96px;
-  height: 20px;
-
-  background: #000;
-
-  border-radius: 999px;
-
-  z-index: 10;
+  margin-top: -70px;
 }
