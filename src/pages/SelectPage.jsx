@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '../services/supabase';
 import ProgressBar from '../components/ProgressBar';
 import mainfish2 from '../assets/images/mainfish.png';
 import modalFish from '../assets/images/EEUM-LogoImage.png';
@@ -16,13 +17,24 @@ const SelectPage = () => {
     setSelectedMaterial(material);
   };
 
-  const handleNextClick = () => {
-    if (selectedMaterial === 'plastic') {
-      setShowModal(true);
-    } else if (selectedMaterial === 'paper') {
-      navigate('/result');
+const handleNextClick = async () => {
+  if (selectedMaterial === 'plastic') {
+    setShowModal(true);
+  } else if (selectedMaterial === 'paper') {
+    const nickname = localStorage.getItem("nickname");
+
+    if (!nickname) {
+      navigate("/");
+      return;
     }
-  };
+
+    await supabase
+      .from("participants")
+      .insert({ nickname });
+
+    navigate("/result");
+  }
+};
 
   return (
     <div className="page-wrapper">
@@ -82,10 +94,21 @@ const SelectPage = () => {
             </p>
             <button 
               className="modal-action-btn"
-              onClick={() => { 
-                setSelectedMaterial('paper'); 
-                setShowModal(false); 
-                navigate('/result');
+              onClick={async () => {
+                const nickname = localStorage.getItem("nickname");
+
+                if (!nickname) {
+                  navigate("/");
+                  return;
+                }
+
+                await supabase
+                  .from("participants")
+                  .insert({ nickname });
+
+                setSelectedMaterial("paper");
+                setShowModal(false);
+                navigate("/result");
               }}
             >
               친환경 종이 선택

@@ -1,9 +1,9 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../services/supabase";
 
 import ProgressBar from "../components/ProgressBar";
 import Fish from "../components/Fish";
-
-import mockParticipants from "../data/mockParticipants";
 
 import mainFish from "../assets/images/mainfish.png";
 import fishBlue from "../assets/images/fish-blue.png";
@@ -29,14 +29,41 @@ const fishPositions = [
 
 function ResultPage() {
   const navigate = useNavigate();
+  const [participants, setParticipants] = useState([]);
+  const [count, setCount] = useState(0);
 
-  const count = mockParticipants.length;
   const reduced = (count * 15.6).toFixed(1);
+
+  async function getParticipants() {
+    const { data, count, error } = await supabase
+      .from("participants")
+      .select("*", { count: "exact" })
+      .order("created_at", { ascending: false })
+      .limit(10);
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    setParticipants(data);
+    setCount(count);
+  }
+
+  useEffect(() => {
+    getParticipants();
+
+    const timer = setInterval(() => {
+      getParticipants();
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="result-page">
       <div className="hangangriver">
-        {mockParticipants.slice(0, 10).map((participant, index) => (
+        {participants.map((participant, index) => (
           <Fish
             key={participant.id}
             image={fishImages[index % fishImages.length]}
