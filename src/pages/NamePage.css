@@ -66,29 +66,29 @@
 
 .welcome-title {
 
-  margin-top: -1px;
+  margin-top: -13px;
 
   font-family: "Pretendard";
 
   font-weight: 700;
 
-  font-size: 35px;
+  font-size: 32px;
 
   line-height: 32px;
 
-  color: #111111;
+  color: #000;
 
 }
 
 .welcome-description {
   width: 390px;
 
-  margin-top: 40px;
+  margin-top: 32px;
 
   font-family: "Pretendard";
   font-weight: 500;
 
-  font-size: 24px;
+  font-size: 20px;
   line-height: 35px;
   letter-spacing: -0.01em;
 
@@ -97,7 +97,7 @@
 }
 
 .welcome-description span {
-  color: #3D82F6;
+  color: #2D81F5;
 }
 
 .name-input-box {
@@ -115,7 +115,7 @@
 
   padding: 0 52px 0 16px;
 
-  border: 1px solid #CFCFCF;
+  border: 1px solid rgba(116, 116, 116, 0.50);
   border-radius: 10px;
 
   outline: none;
@@ -124,11 +124,11 @@
   font-size: 16px;
   font-weight: 500;
 
-  background: white;
+  background:  #FFF;
 }
 
 .name-input::placeholder {
-  color: #9B9B9B;
+  color: #747474
 }
 
 .name-count {
@@ -143,30 +143,26 @@
   font-size: 13px;
   font-weight: 500;
 
-  color: #8A8A8A;
+  color: #747474
 }
 
-.next-button {
-  position: absolute;
+.next-button{
+    margin-top:auto;
+    margin-bottom:74px;
 
-  bottom: 74px;
-  left: 50%;
+    width:246px;
+    height:52px;
 
-  transform: translateX(-50%);
+    border:none;
+    border-radius:999px;
 
-  width: 246px;
-  height: 52px;
+    background:#2D81F5;
 
-  border: none;
-  border-radius: 999px;
+    color:#FFF;
 
-  background: #3D82F6;
+    font-family:"Pretendard";
+    font-size:20px;
+    font-weight:700;
 
-  color: white;
-
-  font-family: "Pretendard";
-  font-size: 20px;
-  font-weight: 700;
-
-  cursor: pointer;
+    cursor:pointer;
 }

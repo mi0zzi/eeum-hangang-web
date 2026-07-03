@@ -6,7 +6,7 @@ import mainFish from "../assets/logo/mainfish1.png";
 
 function NamePage() {
   const navigate = useNavigate();
-  const [fishName, setFishName] = useState("");
+  const [nickName, setNickName] = useState("");
   
   return (
     <div className="page">
@@ -38,25 +38,26 @@ function NamePage() {
             placeholder="예시) 피라미"
             maxLength={10}
             className="name-input"
-            value={fishName}
-            onChange={(e) => setFishName(e.target.value)}
+            value={nickName}
+            onChange={(e) => setNickName(e.target.value)}
           />
 
-          <span className="name-count">{fishName.length} / 10</span>
+          <span className="name-count">{nickName.length} / 10</span>
         </div>
+
+        <button
+          className="next-button"
+          onClick={() => {
+            if (nickName.trim() !== "") {
+                navigate("/select");
+            }
+          }}
+        >
+          다음
+        </button>
 
     </div>
 
-    <button
-        className="next-button"
-        onClick={() => {
-            if (fishName.trim() !== "") {
-                navigate("/select");
-            }
-        }}
-    >
-        다음
-    </button>
       
       {/*
       기존 테스트 코드 (임시 보관)

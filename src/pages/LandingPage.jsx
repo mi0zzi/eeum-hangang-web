@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 
@@ -7,12 +8,16 @@ import logoText from "../assets/logo/EEUM-LogoText1.png";
 function LandingPage() {
 
   const navigate = useNavigate();
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    navigate("/name");
+  }, 3000);
+
+  return () => clearTimeout(timer);
+}, [navigate]);
 
   return (
-    <div 
-      className="page"
-      onClick={() => navigate("/name")}
-    >
+    <div className="page">
 
       {/* 배경 Glow */}
       <div className="background-glow"></div>
