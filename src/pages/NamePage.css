@@ -43,7 +43,6 @@
 
 .select-center {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
@@ -51,10 +50,9 @@
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
-  padding-top: 162px;
+  padding-top: 150px;
 }
 
 .main-fish {
@@ -65,35 +63,32 @@
 }
 
 .welcome-title {
-
-  margin-top: -13px;
+  margin-top: 8px;
+  margin-bottom: 50px;
 
   font-family: "Pretendard";
-
   font-weight: 700;
-
   font-size: 32px;
-
-  line-height: 32px;
-
+  line-height: 1px;
   color: #000;
 
 }
 
 .welcome-description {
-  width: 390px;
+  width: 291px;
 
-  margin-top: 32px;
+  margin-top: 8px;
 
   font-family: "Pretendard";
+  font-size: 21px;
   font-weight: 500;
-
-  font-size: 20px;
-  line-height: 35px;
-  letter-spacing: -0.01em;
+  line-height: 1.4;
+  letter-spacing: 0px;
 
   text-align: center;
-  color: #1F1F1F;
+  color: #111111;
+
+  margin-bottom: 20px;
 }
 
 .welcome-description span {
@@ -103,17 +98,18 @@
 .name-input-box {
   position: relative;
 
-  width: 300px;
-  height: 44px;
+  width: 320px;
+  height: 46px;
 
-  margin-top: 13px;
+  margin-top: 0;
+  margin-bottom: 180px;
 }
 
 .name-input {
   width: 100%;
   height: 100%;
 
-  padding: 0 52px 0 16px;
+  padding: 14px 50px 14px 14px;
 
   border: 1px solid rgba(116, 116, 116, 0.50);
   border-radius: 10px;
@@ -134,35 +130,46 @@
 .name-count {
   position: absolute;
 
-  right: 14px;
-  top: 50%;
+  right: 15px;
+  top: 17px;     
+  width: 31px;
+  height: 16px;
 
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   font-family: "Pretendard";
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
+  line-height: 16px;
 
-  color: #747474
+  color: #747474;
+
+  pointer-events: none;
 }
 
-.next-button{
-    margin-top:auto;
-    margin-bottom:74px;
+.next-button {
+    margin-top: 0;
+    margin-bottom: 0;
 
-    width:246px;
-    height:52px;
+    width: 200px;
+    height: 44px;
 
-    border:none;
-    border-radius:999px;
+    border: none;
+    border-radius: 20px;
 
-    background:#2D81F5;
+    background: #2D81F5;
 
-    color:#FFF;
+    color: #FAFAFA;
 
-    font-family:"Pretendard";
-    font-size:20px;
-    font-weight:700;
+    font-family: "Pretendard";
+    font-size: 15px;
+    font-weight: 500;
 
-    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 }
