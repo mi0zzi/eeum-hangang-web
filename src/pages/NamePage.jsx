@@ -52,7 +52,8 @@ function NamePage() {
           className="next-button"
           onClick={() => {
             if (nickname.trim() !== "") {
-                navigate("/select");
+              localStorage.setItem("nickname", nickname.trim());
+              navigate("/select");
             }
           }}
         >
